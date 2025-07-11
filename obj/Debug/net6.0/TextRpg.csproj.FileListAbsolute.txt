@@ -12,3 +12,4 @@ C:\Users\hswhouse\sparta\TextRpg\TextRpg\obj\Debug\net6.0\refint\TextRpg.dll
 C:\Users\hswhouse\sparta\TextRpg\TextRpg\obj\Debug\net6.0\TextRpg.pdb
 C:\Users\hswhouse\sparta\TextRpg\TextRpg\obj\Debug\net6.0\TextRpg.genruntimeconfig.cache
 C:\Users\hswhouse\sparta\TextRpg\TextRpg\obj\Debug\net6.0\ref\TextRpg.dll
+C:\Users\hswhouse\sparta\TextRpg\TextRpg\obj\Debug\net6.0\TextRpg.sourcelink.json

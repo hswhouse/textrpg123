@@ -36,6 +36,9 @@ namespace TextRpg
             public bool equipitem { get; set; }
         }
 
+        public int[] defitemnum;
+
+        public int[] atkitemnum;
 
 
 
@@ -47,6 +50,16 @@ namespace TextRpg
                 Console.WriteLine("스파르타 던전에 오신 여러분 환영합니다.");
                 Console.WriteLine("원하시는 이름을 설정해 주세요.");
                 user.playername = Console.ReadLine();
+
+                Console.WriteLine("스파르타 던전에 오신 여러분 환영합니다.");
+                Console.WriteLine("이곳에서 던전으로 들어가기 전 활동을 할 수 있습니다.");
+                Console.WriteLine("\n");
+                Console.WriteLine("1. 상태보기 \n2. 인벤토리 \n3. 상점");
+                Console.WriteLine("\n");
+                Console.WriteLine("원하시는 행동을 입력해 주세요");
+
+                behaviornum = int.Parse(Console.ReadLine());
+                behavior(behaviornum);
             }
 
             else
@@ -115,6 +128,14 @@ namespace TextRpg
 
             Console.WriteLine("[아이템 목록]");
 
+            Console.WriteLine("0. 나가기");
+
+            int behaviornum = int.Parse(Console.ReadLine());
+            if (behaviornum == 0)
+            {
+                Main();
+            }
+
         }
 
         static void shop()
@@ -122,8 +143,11 @@ namespace TextRpg
             Console.WriteLine("상점");
             Console.WriteLine("필요한 아이템을 얻을 수 있는 상점입니다.");
 
+
+            item[] items = new item[6];
+
+            //items[0] = new item(0,"수련자 갑옷",0,5,"수련에 도움을 주는 갑옷입니다",1000,false,false);
             item def0 = new item();
-            def0.id = 000;
             def0.name = "수련자 갑옷";
             def0.type = 0;
             def0.stats = 5;
@@ -131,9 +155,11 @@ namespace TextRpg
             def0.price = 1000;
             def0.haveitem = false;
             def0.equipitem = false;
+            //linq 사용 c# 에서 쿼리문을 사용하게 해줌(배열이나 리스트에서 탐색을 쉽게)
+            //아직 사용 안함
 
             item def1 = new item();
-            def1.id = 001;
+
             def1.name = "무쇠갑옷";
             def1.type = 0;
             def1.stats = 5;
@@ -143,7 +169,7 @@ namespace TextRpg
             def1.equipitem = false;
 
             item def2 = new item();
-            def2.id = 002;
+
             def2.name = "스파르타의 갑옷";
             def2.type = 0;
             def2.stats = 5;
@@ -153,7 +179,7 @@ namespace TextRpg
             def2.equipitem = false;
 
             item atk0 = new item();
-            atk0.id = 100;
+
             atk0.name = "낡은 검";
             atk0.type = 0;
             atk0.stats = 5;
@@ -163,7 +189,7 @@ namespace TextRpg
             atk0.equipitem = false;
 
             item atk1 = new item();
-            atk1.id = 101;
+
             atk1.name = "청동 도끼";
             atk1.type = 0;
             atk1.stats = 5;
@@ -173,7 +199,7 @@ namespace TextRpg
             atk1.equipitem = false;
 
             item atk2 = new item();
-            atk2.id = 102;
+
             atk2.name = "스파르타의 창";
             atk2.type = 0;
             atk2.stats = 5;
@@ -181,6 +207,21 @@ namespace TextRpg
             atk2.price = 1000;
             atk2.haveitem = false;
             atk2.equipitem = false;
+
+            for (int i = 0; i < 6; i++) 
+            {
+                if (i == 0) { }
+            }
+
+
+            Console.WriteLine("0. 나가기");
+
+            int behaviornum = int.Parse(Console.ReadLine());
+            if (behaviornum == 0)
+            {
+                Main();
+            }
+
         }
 
     }
